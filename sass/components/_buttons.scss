@@ -1,2 +1,12 @@
 /* @BOTONES */
 /* ********** */
+
+
+
+.boton{
+
+background-color: map-get($colores, amarillo );
+border-radius: 50px;
+width: 237px;
+height: 60px;
+}

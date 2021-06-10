@@ -1,2 +1,17 @@
 /* @TIPOGRAFÍA */
 /* ********** */
+
+
+
+@mixin fontface($roboto, $roboto-regular, $roboto-bold: normal, $estilo: normal){
+    @font-face {
+        font-family: $roboto;
+        font-weight: $roboto-bold;
+        font-style: $estilo;
+
+        src: url(./font/#{$barrio-regular}.woff2) format('woff2'),
+             url(./font/#{$barrio-regular}.woff) format('woff'),
+             url(./font/#{$roboto-bold}.woff2) format('woff2'),
+             url(./font/#{$roboto-bold}.woff) format('woff');
+    }
+}

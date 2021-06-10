@@ -1,2 +1,110 @@
 /* @HEADERS */
 /* ********** */
+
+// .contenedor {
+//     border: 10px solid pink;
+//     display: grid;
+//     grid-template-columns: repeat(12, 1fr);
+//     grid-template-rows: [header] 727px [main] auto [main] 180px;
+//     grid-gap: 24px;
+// }
+header {
+    background: url(../../img/desktop/paisaje.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    // width: 100%;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 29px repeat(6, auto);
+    align-items: center;
+    // justify-content: space-around;
+    padding: 15px;
+
+    // .arriba{
+
+    &__trip {
+        color: map-get($map: $colores, $key:blanco );
+    }
+    &__navegador {
+        grid-column: 5/9;
+        display: flex;
+        justify-content: space-around;
+        a{
+            color:map-get($map:$colores, $key: blanco )
+        }
+    }
+
+    &__ham {
+        grid-column: 12/13;
+    }
+
+    .contenedordos {
+        grid-column: 1/ 5;
+        grid-row: 6;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 24px;
+        // display: flex;
+        // flex-direction: column;
+        &__titulo {
+            grid-column: 1/6;
+            grid-row: 2;
+        }
+        &__subtitulo {
+            grid-column: 1/4;
+            grid-row: 3;
+    
+        }
+        &__botones {
+            grid-column: 1/6;
+            grid-row: 4;
+            display: flex;
+            align-items: center;
+                //  &__boton{}
+                //  &__play{}
+                //  &__texto{}
+        }
+
+        &__texto {
+            grid-column: 1/6;
+            grid-row: 5;
+        }
+        &__redes {
+            grid-column: 1;
+            grid-row: 5;
+        }
+       
+        
+       
+    }
+
+    .contenedortres {
+        grid-column: 5/ 13;
+        grid-row: 6;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 1fr 1fr;
+        // grid-column-gap: 24px;
+
+        &__fotouno {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        &__fotodos {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        &__fototres {
+            grid-column: 3;
+            grid-row: 3;
+        }
+    }
+}
